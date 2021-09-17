@@ -1,7 +1,10 @@
+// Required for file I/O
 const fs = require("fs");
+// Required to grab user input
+const prompt = require("prompt-sync")();
 
 /**
- * Takes a given input string and writes it to
+ * Takes a given input string and writes it to document.txt
  * @param {String} input
  */
 const printer = (input) => {
@@ -11,6 +14,9 @@ const printer = (input) => {
   });
 };
 
+/**
+ * Reads data from document.txt and displays it
+ */
 const scanner = () => {
   fs.readFile("document.txt", "utf8", function (err, data) {
     if (err) return console.log(err);
@@ -18,8 +24,9 @@ const scanner = () => {
   });
 };
 
-const prompt = require("prompt-sync")();
-
+/**
+ * Driver code: looks for valid prompts and prints or scans accordingly
+ */
 let correctPrompt = false;
 while (!correctPrompt) {
   let input = prompt("Enter 'p' for printing and 's' for scanning: ");
