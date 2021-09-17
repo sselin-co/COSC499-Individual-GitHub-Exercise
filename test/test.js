@@ -14,6 +14,9 @@ describe("printing", () => {
     });
   });
 });
+/**
+ * Asserts if the input variable is equal to ''
+ */
 describe("printing nothing", () => {
   describe("scanning", () => {
     it("should print '' to test.txt then scan it back", () => {
@@ -25,6 +28,9 @@ describe("printing nothing", () => {
     });
   });
 });
+/**
+ * Asserts if the input variable is equal to a large string
+ */
 describe("printing a large string", () => {
   describe("scanning", () => {
     it("should print input from lorem.txt to test.txt then scan it back", () => {
@@ -36,9 +42,12 @@ describe("printing a large string", () => {
     });
   });
 });
+/**
+ * Asserts if the input variable is equal to undefined
+ */
 describe("printing undefined", () => {
   describe("scanning", () => {
-    it("should print input from lorem.txt to test.txt then scan it back", () => {
+    it("should print '' to test.txt then scan it back", () => {
       let input = undefined;
       let filename = "test/test.txt";
       tools.printer(input, filename);
