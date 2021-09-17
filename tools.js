@@ -12,7 +12,7 @@ module.exports = {
     console.log("[ %c" + input, "color: red", "] printed to:", filename);
   },
   /**
-   * Reads data from document.txt and displays it to console
+   * Reads data from filename and displays it to console
    * @param {String} filename - name of targeted file
    * @returns data from targeted file
    */

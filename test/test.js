@@ -1,3 +1,6 @@
+/**
+ * Asserts if the input variable is equal to 'test'
+ */
 let assert = require("assert");
 const tools = require("../tools");
 describe("printing", () => {
