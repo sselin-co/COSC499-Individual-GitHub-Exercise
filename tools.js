@@ -4,23 +4,21 @@ const fs = require("fs");
 module.exports = {
   /**
    * Takes a given input string and writes it to a given filename
-   * @param {String} input
-   * @param {String} filename
+   * @param {String} input - user supplied string
+   * @param {String} filename - name of targeted file
    */
   printer: function (input, filename) {
-    fs.writeFile(filename, input, function (err) {
-      if (err) return console.log(err);
-      console.log("[ %c" + input, "color: red", "] printed to:", filename);
-    });
+    fs.writeFileSync(filename, input);
+    console.log("[ %c" + input, "color: red", "] printed to:", filename);
   },
   /**
    * Reads data from document.txt and displays it to console
-   * @param {String} filename
+   * @param {String} filename - name of targeted file
+   * @returns data from targeted file
    */
   scanner: function (filename) {
-    fs.readFile(filename, "utf8", function (err, data) {
-      if (err) return console.log(err);
-      console.log("[", data, "] scanned from:", filename);
-    });
+    let data = fs.readFileSync(filename, "utf8");
+    console.log("[", data, "] scanned from:", filename);
+    return data;
   },
 };
