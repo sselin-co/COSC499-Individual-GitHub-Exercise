@@ -7,7 +7,7 @@ module.exports = {
    * @param {String} input - user supplied string
    * @param {String} filename - name of targeted file
    */
-  printer: function (input, filename) {
+  printer: (input, filename) => {
     fs.writeFileSync(filename, input);
     console.log("[ %c" + input, "color: red", "] printed to:", filename);
   },
@@ -16,7 +16,7 @@ module.exports = {
    * @param {String} filename - name of targeted file
    * @returns data from targeted file
    */
-  scanner: function (filename) {
+  scanner: (filename) => {
     let data = fs.readFileSync(filename, "utf8");
     console.log("[", data, "] scanned from:", filename);
     return data;

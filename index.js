@@ -1,7 +1,6 @@
 /**
  * Driver code: looks for valid prompts and prints or scans accordingly
  */
-
 const prompt = require("prompt-sync")(); // Required to grab user input
 const tools = require("./tools"); // Contains printer and scanner functions
 const filename = "document.txt";
