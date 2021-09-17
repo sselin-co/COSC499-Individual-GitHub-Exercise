@@ -11,8 +11,10 @@ while (!correctPrompt) {
     correctPrompt = true;
     input = prompt("Enter a text input: ");
     tools.printer(input, filename);
+    console.log("[ %c" + input, "color: red", "] printed to:", filename);
   } else if (input === "s") {
     correctPrompt = true;
-    tools.scanner(filename);
+    let data = tools.scanner(filename);
+    console.log("[", data, "] scanned from:", filename);
   }
 }

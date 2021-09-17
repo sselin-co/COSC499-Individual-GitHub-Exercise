@@ -9,7 +9,6 @@ module.exports = {
    */
   printer: (input, filename) => {
     fs.writeFileSync(filename, input);
-    console.log("[ %c" + input, "color: red", "] printed to:", filename);
   },
   /**
    * Reads data from filename and displays it to console
@@ -18,7 +17,6 @@ module.exports = {
    */
   scanner: (filename) => {
     let data = fs.readFileSync(filename, "utf8");
-    console.log("[", data, "] scanned from:", filename);
     return data;
   },
 };
