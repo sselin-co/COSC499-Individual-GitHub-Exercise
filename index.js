@@ -7,5 +7,13 @@ const printer = (input) => {
 };
 
 const prompt = require("prompt-sync")();
-const input = prompt("Enter input: ");
-printer(input);
+
+let correctPrompt = false;
+while (!correctPrompt) {
+  let input = prompt("Enter 'p' for printing and 's' for scanning: ");
+  if (input === "p") {
+    correctPrompt = true;
+    input = prompt("Enter a text input: ");
+    printer(input);
+  }
+}
