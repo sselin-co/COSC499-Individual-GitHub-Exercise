@@ -6,6 +6,7 @@ const tools = require("./tools"); // Contains printer and scanner functions
 const filename = "document.txt";
 let correctPrompt = false;
 while (!correctPrompt) {
+  // Prompts the user till a valid command is entered
   let input = prompt("Enter 'p' for printing and 's' for scanning: ");
   if (input === "p") {
     correctPrompt = true;
