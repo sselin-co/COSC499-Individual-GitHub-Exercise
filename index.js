@@ -1,2 +1,3 @@
-const message = "An important message";
-console.log(message);
+const prompt = require("prompt-sync")();
+const input = prompt("Enter input: ");
+console.log(`Your input: ${input}`);
